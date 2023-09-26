@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CiudadController;
+use App\Http\Controllers\MujerCuidadoraController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Ruta para acceder a la pagina ciudad
+Route::get('ciudad',[CiudadController::class,"index"])->name('ciudad.index');
+Route::post('/ingresarCiudad',[CiudadController::class,"create"])->name('ciudad.create');
+
+
+
+//Ruta para acceder a la pagina mujerCuidadora
+Route::get('mujer',[MujerCuidadoraController::class,"index"])->name('mujer.index');
+
+Route::post('ingresarMujer',[MujerCuidadoraController::class,'create'])->name('mujer.create');

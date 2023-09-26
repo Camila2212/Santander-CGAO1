@@ -9,5 +9,6 @@
 </head>
 <body>
     <h1>este es el menu</h1>
+    <a href="{{route('ciudad')}}">ciudad</a>
 </body>
 </html>
